@@ -1,0 +1,24 @@
+<template>
+            <lightning-card title="Quick Update no apex">
+                <div class="blackBorder">
+                    <div class="slds-box slds-box_xx-small" >Internal Name: performUpdateOnAccount</div>
+                  </div>
+                  <div class="separation"></div>
+                <lightning-layout>
+                    <lightning-layout-item>
+                        <lightning-record-edit-form
+                        object-api-name="Account"
+                        onsuccess={handleSuccess} 
+                        record-id={recordId} 
+                        onsubmit ={handleSubmit}>
+                   <!-- We can use this simple version like designing of indivisual input field -->
+                    <lightning-input-field field-name={accountName}></lightning-input-field> 
+                   <lightning-input-field field-name={accountType}></lightning-input-field>
+                   <lightning-input-field field-name={accountPhone}></lightning-input-field>
+                   <lightning-input-field field-name={accountRating}></lightning-input-field>
+               <lightning-button class="slds-m-horizontal_x-small" variant="brand" type="submit" name="update" label="Update"></lightning-button>
+                        </lightning-record-edit-form>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-card>
+    </template>

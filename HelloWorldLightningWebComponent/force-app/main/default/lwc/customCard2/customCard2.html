@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  title="Enter Tag Values" variant="Narrow">
+        <!-- ******SECTION START: SHOW INTERNAL NAME****** --> 
+        <div class="blackBorder">
+            <div class="slds-box slds-box_xx-small" >Internal Name: customCard2</div>
+          </div>
+          <div class="separation"></div>
+           <!-- ******SECTION END: SHOW INTERNAL NAME****** --> 
+        <lightning-layout>
+            <lightning-layout-item flexibility="auto" padding="around-small" >        
+                <lightning-input label="Card Name" onchange={changeHandler1}></lightning-input>
+                <lightning-input label="Tag1" onchange={changeHandler2}></lightning-input>
+                <lightning-input label="Tag2" onchange={changeHandler3}></lightning-input>
+                <lightning-input label="Tag3" onchange={changeHandler4}></lightning-input>      
+                <!-- <lightning-button variant="brand" label="Update Tag Info" onclick={handleClick}></lightning-button> -->
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+    <c-custom-card section-name={newSection} -tag1={newTag1} -tag2={newTag2} -tag3={newTag3}></c-custom-card>
+</template>

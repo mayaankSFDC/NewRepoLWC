@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="testDropdown">
+        <lightning-combobox               
+               label="Status"
+               value={value}
+               placeholder="Select Opportunity"
+               options={options}
+               onchange={handleChanged} >
+   </lightning-combobox>
+   <p>Selected value is: {value}</p>
+    </lightning-card>   
+</template>

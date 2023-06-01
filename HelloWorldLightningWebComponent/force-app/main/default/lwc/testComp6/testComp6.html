@@ -1,0 +1,11 @@
+<template>
+    <lightning-card icon-name="custom:custom18" title="A Card"> 
+        <div class="slds-var-m-left_medium">
+            <template if:true={record}>
+                <template for:each={fValues} for:item='fld'>
+                    <p key={fld}>{fld}</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

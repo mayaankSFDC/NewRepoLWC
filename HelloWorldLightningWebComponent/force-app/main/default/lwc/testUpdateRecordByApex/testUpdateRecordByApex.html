@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Test Update Record By Apex" >
+         <!-- ******SECTION START: SHOW INTERNAL NAME****** --> 
+        <div class="blackBorder">
+            <div class="slds-box slds-box_xx-small" >Internal Name: testUpdateRecordByApex</div>
+          </div>
+          <div class="separation"></div>
+           <!-- ******SECTION END: SHOW INTERNAL NAME****** --> 
+        <div class="slds-m-around_medium" >
+            
+                <lightning-input label="Name"   onchange={handleNameChange} class="slds-m-bottom_x-small"></lightning-input> 
+                <lightning-combobox
+                label="Example"
+                value={selectedOption}
+                options={options}    
+                class="slds-m-bottom_x-small"></lightning-combobox>
+                <lightning-button label="Update Account" onclick={onUpdateRecord} variant="brand"></lightning-button>
+            
+        </div> 
+    </lightning-card>
+</template>

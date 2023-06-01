@@ -1,0 +1,22 @@
+<!-- This component is made to peform update using record edit form -->
+<template>
+    <lightning-card title="Quick Update">      
+        <div class="blackBorder">
+            <div class="slds-box slds-box_xx-small" >Internal Name: performUpdateOnAccount</div>
+          </div>
+          <div class="separation"></div>  
+    <lightning-record-edit-form 
+    class="slds-var-m-around_large" 
+    record-id={recordId} 
+    object-api-name="Contact"            
+    onsuccess={handleSuccess} 
+    onsubmit ={handleSubmit}>       
+        <!-- We can use this simple version like designing of indivisual input field -->
+        <lightning-input-field field-name="FirstName"></lightning-input-field>
+        <lightning-input-field field-name="LastName"></lightning-input-field>
+        <lightning-input-field field-name="Email"></lightning-input-field>
+        <lightning-button class="slds-m-horizontal_x-small" variant="brand" type="submit" name="update" label="Update">
+        </lightning-button>
+    </lightning-record-edit-form>
+</lightning-card>
+</template>

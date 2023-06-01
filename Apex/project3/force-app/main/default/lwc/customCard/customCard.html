@@ -1,0 +1,19 @@
+<template>
+    <lightning-card>
+        <div class="blackBorder">
+            <div class="slds-box slds-box_xx-small" >Internal Name: customCard</div>
+          </div>
+    
+        <lightning-button label="New" slot="actions"></lightning-button>
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+            {sectionName}
+        </h3>
+        <div slot="footer">
+                <lightning-badge label={Tag1}></lightning-badge>
+                <lightning-badge label={Tag2}></lightning-badge>
+                <lightning-badge label={Tag3}></lightning-badge>
+        </div>
+        <p class="slds-p-horizontal_small">Card Body (custom component)</p>
+    </lightning-card>
+</template>

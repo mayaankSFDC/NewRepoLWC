@@ -1,0 +1,20 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div style="height: 300;">
+        <lightning-card title="Inline Editing LWC">
+            <div class="blackBorder">
+                <div class="slds-box slds-box_xx-small" >Internal Name: dataTableWithInline</div>
+              </div>
+        <div class="separation"></div>
+            <lightning-datatable key-field="Id" 
+                                data={data} 
+                                show-row-number-column 
+                                onsave={handleSave} 
+                                draft-values={saveDraftValue} 
+                                hide-checkbox-column 
+                                columns={columns}>
+
+            </lightning-datatable>
+        </lightning-card>
+    </div>
+</template>

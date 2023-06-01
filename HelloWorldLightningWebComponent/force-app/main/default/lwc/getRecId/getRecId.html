@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Custom Info LWC">
+        <!-- ******SECTION START: SHOW INTERNAL NAME****** --> 
+        <div class="blackBorder">
+            <div class="slds-box slds-box_xx-small" >Internal Name: getRecId</div>
+          </div>
+          <div class="separation"></div>
+           <!-- ******SECTION END: SHOW INTERNAL NAME****** -->
+    <div class="acc-container slds-m-around_medium">
+    <lightning-record-view-form record-id={recordId} object-api-name="Account">
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-output-field field-name="Name"></lightning-output-field>
+                <lightning-output-field field-name="Website"></lightning-output-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-output-field field-name="Industry"></lightning-output-field>
+                <lightning-output-field field-name="AccountNumber"></lightning-output-field>
+            </div>
+        </div>
+    </lightning-record-view-form>
+    </div>
+</lightning-card>
+</template>

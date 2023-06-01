@@ -1,0 +1,19 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+    
+    <lightning-card title="Custom Accounts Component">
+        <div class="blackBorder">
+            <div class="slds-box slds-box_xx-small" >Internal Name: accountList</div>
+          </div>
+    <div class="separation"></div>        
+        <lightning-button label="New" slot="actions" class="slds-button slds-button_stretch" ></lightning-button>               
+        <template if:true={accounts.data}>
+            <lightning-datatable
+                key-field="Id"
+                data={accounts.data}
+                columns={columns}>
+           </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

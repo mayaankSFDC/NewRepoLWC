@@ -1,0 +1,53 @@
+<!-- Basically, there are two types of properties such as Reactive Properties and Private 
+Properties.
+
+Reactive Properties has of three types such as Public Property, Tracked Property & 
+Boolean Property.
+
+Reactive Properties
+
+Public Property: If you want to make the property to be called from other component, 
+you need to declare this property with @api decorator in the calling component. 
+Along with this, if the value changes on this property, component will be re-rendered 
+automatically. That’s why, it’s reactive.
+
+Track Property: If you want to track the property’s value, you need to declare this 
+property with @track decorator. Along with this, if the value changes on this property, 
+component will be re-rendered automatically. That’s why, it’s reactive. 
+Track property is also called private reactive property. Because, caller component 
+or component A can not call with @track decorator property to the calling component 
+or component B.
+
+Boolean Property: By default, Boolean Property has the value of false. 
+If you call the component with just  Boolean Property name, the Boolean 
+value would be true and component will also be re-rendered due to @api decorator. 
+That’s why, it’s reactive.
+
+Private Property
+Private Property can be used only by the JS class in JS file. If the value changes 
+on private property, the component doesn’t re-render. So, it’s not reactive. You 
+should not put any decorator (@api, @track) for declaration of private property. -->
+
+
+<template>
+    
+    <lightning-card title={sectionName} icon-name="custom:custom13">   
+        <div class="blackBorder">
+            <div class="slds-box slds-box_xx-small" >Internal Name: callIncremental</div>
+          </div>
+          <div class="separation"></div>
+            <lightning-layout>
+                <!-- <lightning-layout-item flexibility="no-shrink" padding="around-small">                    
+                    Internal Name: callIncremental
+                </lightning-layout-item>
+                <br/> -->
+                <lightning-layout-item flexibility="auto" padding="around-small">                    
+                                      
+                    <template if:true={enableIncrement}>
+                        {incrementValue}
+                        <lightning-button label="+" variant="brand" onclick={increment} class="slds-m-left_large"></lightning-button>
+                    </template>
+                </lightning-layout-item>
+            </lightning-layout>
+    </lightning-card>  
+</template>

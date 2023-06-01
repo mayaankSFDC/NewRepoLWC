@@ -1,0 +1,32 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!--
+    @description       : 
+    @author            : Amit Singh
+    @group             : 
+    @last modified on  : 06-03-2021
+    @last modified by  : Amit Singh
+    Modifications Log 
+    Ver   Date         Author       Modification
+    1.0   06-03-2021   Amit Singh   Initial Version
+-->
+<template>
+    
+    <lightning-quick-action-panel header="Quick Action Create Account" class="slds-text-heading_small" >        
+        <lightning-spinner alternative-text="Loading" size="small" if:true={isSpinner} ></lightning-spinner>
+        <div class="blackBorder">
+            
+            <div class="slds-box slds-box_xx-small" >Internal Name: quickAccount</div>
+        </div>
+    <!-- <div class="separation"></div> -->
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" variant="standard" value={name} name="name" label="Account Name" onchange={handleChange} ></lightning-input>
+            <lightning-input type="text" variant="standard" value={phone} name="phone" label="Account Phone" onchange={handleChange} ></lightning-input>
+        </div>
+        <div slot="footer">
+            <lightning-button variant="destructive" label="Cancel" onclick={closeAction} ></lightning-button>
+            &nbsp; &nbsp;
+            <lightning-button variant="brand" label="Save" onclick={handleSave} ></lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>
